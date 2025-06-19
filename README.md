@@ -59,12 +59,15 @@ To use this plugin effectively, you must include the following three fields:
 - `billing_province_code` (select) – Province/City
 - `billing_district_code` (select) – District
 - `billing_ward_code` (select) – Ward
+  
   <img src="./assets/billing_address_editor_changed.png" alt="Ảnh cài đặt thêm địa chỉ thanh toán" width="600">
+  
 - `shipping_province_code` (select) – Province/City
 - `shipping_district_code` (select) – District
 - `shipping_ward_code` (select) – Ward
-  <img src="./assets/shipping_address_editor_changed.png" alt="Ảnh cài đặt thêm địa chỉ thanh toán" width="600">
   
+  <img src="./assets/shipping_address_editor_changed.png" alt="Ảnh cài đặt thêm địa chỉ thanh toán" width="600">
+    
 == Screenshots ==
 
 1. Start screen: `/assets/overview.png`
