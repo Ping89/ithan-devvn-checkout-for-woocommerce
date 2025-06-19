@@ -59,7 +59,12 @@ To use this plugin effectively, you must include the following three fields:
 - `billing_province_code` (select) – Province/City
 - `billing_district_code` (select) – District
 - `billing_ward_code` (select) – Ward
-
+  <img src="./assets/billing_address_editor_changed.png" alt="Ảnh cài đặt thêm địa chỉ thanh toán" width="600">
+- `shipping_province_code` (select) – Province/City
+- `shipping_district_code` (select) – District
+- `shipping_ward_code` (select) – Ward
+  <img src="./assets/shipping_address_editor_changed.png" alt="Ảnh cài đặt thêm địa chỉ thanh toán" width="600">
+  
 == Screenshots ==
 
 1. Start screen: `/assets/overview.png`
@@ -70,6 +75,8 @@ To use this plugin effectively, you must include the following three fields:
 <img src="./assets/select_vn_address_view.png" alt="Ảnh hiển chọn địa chỉ" width="600">
 4. Error Message view: `/assets/error_messages.png`
 <img src="./assets/error_messages.png" alt="Ảnh hiển thông báo lỗi" width="600">
+5. Order Edit Form (Admin): `/assets/order_edit_in_admin.png`
+<img src="./assets/order_edit_in_admin.png" alt="Ảnh hiển cập nhật đơn hàng" width="600">
 
 == Changelog ==
 
