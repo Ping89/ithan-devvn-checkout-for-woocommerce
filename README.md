@@ -9,13 +9,13 @@ Donate link:
 
 Tags: checkout, fields, woocommerce, custom, payment
 
-Requires at least: 6.0
+Requires at least: 5.2
 
 Tested up to: 6.8
 
 Stable tag: 3.2
 
-Requires PHP: 7.0
+Requires PHP: 7.2
 
 License: GPLv2 or later
 
