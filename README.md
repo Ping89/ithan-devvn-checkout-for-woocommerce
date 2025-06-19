@@ -2,14 +2,23 @@
 Trình thay đổi địa chỉ của woocommerce cho phù hợp với Việt Nam
 
 === ithan devvn checkout for woocommerce ===
+
 Contributors: laptrinhvienso0
+
 Donate link: 
+
 Tags: checkout, fields, woocommerce, custom, payment
+
 Requires at least: 6.0
+
 Tested up to: 6.8
+
 Stable tag: 3.2
+
 Requires PHP: 7.0
+
 License: GPLv2 or later
+
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Short Description: Allows you to customize address fields for Vietnamese addresses, including provinces, districts, and wards.
