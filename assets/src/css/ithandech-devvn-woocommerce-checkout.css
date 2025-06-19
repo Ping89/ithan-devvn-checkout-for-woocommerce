@@ -1,0 +1,1690 @@
+/* ====================================================== */
+/* ===========  [1] Global Theme Variables & #main  ===== */
+/* ====================================================== */
+:root {
+  --color-bg: #1e1e1e;
+  --color-surface: #2d3c2f;
+  --color-text: #d4d4d4;
+  --color-text2: #555;
+  --color-info: #5da5e0;
+  --color-accent: #007acc;
+  --color-selected: #a4805e;
+
+  --color-error: #e15858;
+  --color-price: #e06c75;
+  --color-bg-tooltip: #fff;
+  --color-text-tooltip: #b3b6bb;
+
+  --color-raidio-checkbox-border: #333;
+  --color-raidio-checkbox-active-border: #38d35a;
+
+  --color-bg-checkout-button: #d26e4b;
+  --color-bg-hover-checkout-button: #714737;
+
+  --color-divider: #ddd;
+  --color-ticket-container: #2d3c2f;
+
+  --color-address-circle: #7AA880;
+  --color-boder-hover-card: #c026d3;
+  --color-box-shadow: #171717;
+
+  --muted: #6b7280;
+  --border-color: #e5e7eb;
+
+  /* Biến cho icon */
+  --icon-bg: transparent;
+  --icon-width: 16px;
+  --icon-height: 16px;
+
+  --line-height: .8rem;
+}
+
+/* overite flatsome theme */
+.checkout.woocommerce-checkout h3,
+.ithan__col-lg h2,
+.shipping__table th{
+  color: var(--color-text);
+}
+
+.woocommerce .button, 
+.woocommerce input[type=submit]{
+  background-color: var(--color-bg-checkout-button) !important;
+  border-color: var(--border-color);
+  color: var(--color-text);
+}
+  
+#main {
+  color: var(--color-text) !important;
+  background-color: var(--color-bg) !important;
+  min-height: 100vh;
+}
+  
+/* ====================================================== */
+/* ===========  [3] Các Style Bổ Sung (Chung)  =========== */
+/* ====================================================== */
+
+/* overite flatsome theme */
+@media screen and (max-width: 600px) {
+  .col {
+    padding: 0 !important;
+  }
+  .woocommerce{
+    padding: 0 !important;
+  }
+}
+
+.checkout.woocommerce-checkout button#place_order{
+  background-color: var(--color-bg-checkout-button) !important;
+}
+
+.checkout.woocommerce-checkout button#place_order:hover{
+  background-color: var(--color-bg-hover-checkout-button);
+}
+
+.checkout.woocommerce-checkout tr.cart_item td.product-name{
+  color: var(--color-info);
+}
+
+.checkout.woocommerce-checkout tr.cart_item .variation{
+  color: var(--muted);
+}
+
+.woocommerce-checkout-review-order p,
+.woocommerce-privacy-policy-text p{
+  color: var(--muted);
+}
+
+.woocommerce-privacy-policy-text a {
+  color: var(--color-text);
+}
+
+.woocommerce-additional-fields__field-wrapper label,
+.woocommerce-privacy-policy-text a:hover {
+  color: var(--color-text2);
+}
+
+.woocommerce .checkout-sidebar ul li {
+  margin-bottom: 5px;
+}
+
+.display__none{
+  display: none !important;
+}
+  
+  /* Shipping list */
+  .shipping__list_item {
+    padding-right: 0.2rem !important;
+  }
+  
+  .shipping__list_label {
+    position: relative;
+  }
+  
+  .shipping__list_label .woocommerce-Price-amount {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Customer Gender: hiển thị hàng ngang */
+  .customer-gender {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Loại bỏ margin/padding mặc định của .form-row WooCommerce */
+  .woocommerce form .form-row {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* ====================================================== */
+  /* ===========  [4] Wrapper & Input Styles  ============= */
+  /* ====================================================== */
+  
+  /* Wrapper chung cho input & location */
+  .input-wrapper,
+  .location-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-surface);
+    border-radius: 10px;
+    margin-bottom: .5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* Icon trong .location-wrapper hoặc .input-wrapper */
+  .location-wrapper .icon,
+  .input-wrapper .icon {
+    width: var(--icon-width);
+    height: var(--icon-height);
+    color: var(--color-text);
+  }
+  
+  /* Input thường & Select (khi chưa dùng Select2) */
+  .input-wrapper .input,
+  .location-wrapper select {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-text);
+    margin: 0;
+    line-height: var(--line-height);
+    vertical-align: middle;
+  }
+  
+  /* Placeholder của input */
+  .input-wrapper .input::placeholder {
+    color: var(--color-text);
+    opacity: 0.6;
+  }
+  
+  /* Focus state cho input và select */
+  .input-wrapper .input:focus,
+  .location-wrapper select:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    color: var(--color-text);
+  }
+  
+  /* Vị trí icon trong .input-wrapper */
+  /* .location-wrapper > span, */
+  .input-wrapper > span {
+    display: flex;
+    align-items: center;
+    background-color: var(--icon-bg);
+    padding: 10px; /* Có thể điều chỉnh */
+  }
+  
+  /* .input-container bao bọc các .input-wrapper */
+  .input-container {
+    display: flex;
+    position: relative;
+  }
+  
+  /* .location-wrapper giãn hết chiều rộng còn lại */
+  .input-container .location-wrapper {
+    flex: 1;
+    box-sizing: border-box;
+  }
+  
+  /* Dàn rộng 100% cho .select2-container (nếu có) */
+  .location-wrapper span.selection {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  /* Loại trừ span đầu tiên trong .location-wrapper */
+  .location-wrapper span:not(:first-child) {
+    background-color: transparent;
+  }
+
+/* ====================================================== */
+/* ===========  [5.1] Style cho Gender Radio  ============ */
+/* ====================================================== */
+.gender-radio-container {
+  display: flex;
+  justify-content: space-between;  /* Căn chỉnh đều các phần tử */
+  align-items: center;  /* Căn chỉnh các phần tử theo chiều dọc */
+  padding-bottom: 15px;
+}
+
+.check-box-wrapper,
+.gender-radio-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 120%;
+  margin-top: .8rem;
+  margin-bottom: 1.4rem;
+}
+
+.gender-radio-wrapper {
+  justify-content: space-between;
+}
+
+/* Cập nhật để tất cả button nằm trong cùng một dòng */
+.ithan__btn-wrapper, .gender-radio-wrapper {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+}
+
+.check-box-wrapper label,
+.gender-radio-wrapper label {
+  position: relative;
+  display: inline-block;
+  color: var(--color-text2);
+  cursor: pointer;
+}
+
+.check-box-wrapper label .icon,
+.gender-radio-wrapper label .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.check-box-wrapper label span,
+.gender-radio-wrapper label span {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  transform-origin: center;
+  border: 2px solid var(--color-raidio-checkbox-border);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: transparent;
+  transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+.check-box-wrapper label span::before,
+.gender-radio-wrapper label span::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transform: rotate(45deg);
+  transition: width 50ms ease 50ms;
+}
+
+.check-box-wrapper label span::after,
+.gender-radio-wrapper label span::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transform: rotate(305deg);
+  transition: width 50ms ease;
+}
+
+.check-box-wrapper label:hover span::before,
+.gender-radio-wrapper label:hover span::before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+
+.check-box-wrapper label:hover span::after,
+.gender-radio-wrapper label:hover span::after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}
+
+.check-box-wrapper input[type=checkbox],
+.gender-radio-wrapper input[type=radio] {
+  display: none;
+}
+
+/* Khi checkbox hoặc radio button được chọn */
+.check-box-wrapper input[type=checkbox]:checked+label span,
+.gender-radio-wrapper input[type=radio]:checked+label span {
+  transform: scale(1.25);
+  background-color: var(--color-surface);
+}
+
+.check-box-wrapper input[type=checkbox]:checked+label span::after,
+.gender-radio-wrapper input[type=radio]:checked+label span::after {
+  width: 10px;
+  background-color: #fff;
+}
+
+.check-box-wrapper input[type=checkbox]:checked+label span::before,
+.gender-radio-wrapper input[type=radio]:checked+label span::before {
+  width: 5px;
+  background-color: #fff;
+}
+
+/* Khi chọn checkbox hoặc radio button và hover */
+.check-box-wrapper input[type=checkbox]:checked+label:hover span,
+.gender-radio-wrapper input[type=radio]:checked+label:hover span {
+  transform: scale(1.25);
+  background-color: var(--color-surface);
+}
+
+.check-box-wrapper input[type=checkbox]:checked+label:hover span::after,
+.gender-radio-wrapper input[type=radio]:checked+label:hover span::after {
+  width: 10px;
+  background-color: #fff;
+}
+
+.check-box-wrapper input[type=checkbox]:checked+label:hover span::before,
+.gender-radio-wrapper input[type=radio]:checked+label:hover span::before {
+  width: 5px;
+  background-color: #fff;
+}
+
+.gender-radio-container .icon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-text);
+}
+
+.gender-radio-container button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  font-size: 14px;
+  min-height: auto;
+  padding: 0;
+}
+
+/* ====================================================== */
+/* =============  Shipping radios  ====================== */
+/* ====================================================== */
+
+/* Container của mỗi shipping radio (thẻ li) */
+.shipping__list_item {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--color-surface) !important;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  min-height: 2.4em;
+  padding: 0.3em 0.6em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.shipping__list_item p {
+  margin: 0 !important;
+}
+
+/* Khi hover hoặc khi radio được chọn */
+.shipping__list_item:hover,
+.shipping__list_item:has(input.shipping__radio:checked) {
+  background-color: var(--color-surface) !important;
+  border: 1px solid var(--color-text) !important;
+}
+.shipping__list_item:hover label,
+.shipping__list_item:has(input.shipping__radio:checked) label {
+  color: var(--color-text);
+}
+
+/* Container chứa radio và label */
+.payment-radio-wrapper,
+.shipping-radio-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Ẩn radio gốc */
+.payment-radio-wrapper input[type="radio"],
+.shipping-radio-wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Tùy biến giao diện radio custom */
+.payment-radio-wrapper label > span:first-child,
+.shipping-radio-wrapper label > span:first-child {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  transform-origin: center;
+  border: 2px solid var(--color-raidio-checkbox-border);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-color: transparent;
+  transition: background-color 150ms 200ms, transform 350ms cubic-bezier(0.78, -1.22, 0.17, 1.89);
+}
+
+.payment-radio-wrapper label > span:first-child::before,
+.shipping-radio-wrapper label > span:first-child::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  transition: width 50ms ease 50ms;
+}
+
+.payment-radio-wrapper label > span:first-child::after,
+.shipping-radio-wrapper label > span:first-child::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transform: rotate(305deg);
+  transform-origin: 0% 0%;
+  transition: width 50ms ease;
+}
+
+/* Hover state cho radio custom */
+.payment-radio-wrapper label:hover > span:first-child::before,
+.shipping-radio-wrapper label:hover > span:first-child::before {
+  width: 5px;
+  transition: width 100ms ease;
+}
+
+.payment-radio-wrapper label:hover > span:first-child::after,
+.shipping-radio-wrapper label:hover > span:first-child::after {
+  width: 10px;
+  transition: width 150ms ease 100ms;
+}
+
+/* Khi radio được chọn */ 
+.woocommerce-checkout input[type="checkbox"]:checked + label > span:first-child,
+.woocommerce-checkout input[type="radio"]:checked + label > span:first-child {
+  transform: scale(1.1);
+  border-color: var(--color-raidio-checkbox-active-border);
+}
+
+.woocommerce-checkout input[type="checkbox"]:checked + label > span:first-child::before,
+.woocommerce-checkout input[type="radio"]:checked + label > span:first-child::before {
+  width: 5px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transition: width 150ms ease 100ms;
+}
+
+.woocommerce-checkout input[type="checkbox"]:checked + label > span:first-child::after,
+.woocommerce-checkout input[type="radio"]:checked + label > span:first-child::after {
+  width: 10px;
+  background-color: var(--color-raidio-checkbox-active-border);
+  transition: width 150ms ease 100ms;
+}
+
+/* Label chứa text và giá */
+.shipping-radio-wrapper .shipping-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--color-text2);
+  margin: 0 !important;
+  cursor: pointer;
+}
+
+.woocommerce-checkout-payment label {
+  color: var(--color-text2);
+}
+
+/* Đẩy phần giá sang bên phải */
+.shipping-radio-wrapper .shipping-label .woocommerce-Price-amount.amount {
+  margin-left: auto;
+}
+  
+/* ====================================================== */
+/* ===========  [5.2] Style cho Label & Mô Tả  ============ */
+/* ====================================================== */
+.checkout-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.checkout-label .required {
+  color: var(--color-error);
+  margin-left: 2px;
+}
+
+.description {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-top: 0.25rem;
+}
+
+.product-page-price {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.product-name a,
+.product-title {
+  color: var(--color-info) !important;
+}
+
+#billing_country_field {
+  display: flex;
+  align-items: center;
+}
+
+#billing_country_field label {
+  margin-right: 10px;
+}
+
+.hidden-tooltip {
+  opacity: 0;
+}
+
+/* Animation keyframes */
+@keyframes floatRight {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  37.5% {
+    transform: translateX(0);  /* Đứng yên 3s */
+    opacity: 1;
+  }
+  38% {
+    transform: translate(15%, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(35%, 0);
+    opacity: 0.8;
+  }
+  65% {
+    transform: translate(65%, 0);
+    opacity: 0.7;
+  }
+  85% {
+    transform: translate(100%, 0);
+    opacity: 0.5;
+  }
+  92% {
+    transform: translate(200%, 0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(300%, 0) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+.location__tooltip-jump{
+  animation: floatRight 8s forwards cubic-bezier(0.6, 0, 0.4, 1);
+}
+ 
+  /* ====================================================== */
+  /* ===========  [6] Tooltip Báo Lỗi (nếu có)  =========== */
+  /* ====================================================== */
+  .error {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    margin-bottom: 8px;
+    padding: 0.5em 1em 0.4em;
+    background-color: var(--color-error);
+    border: 1px solid #f00;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+  }
+  
+  .error::before,
+  .error::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 10px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  
+  .error::before {
+    border-top: 8px solid #f00;
+  }
+  
+  .error::after {
+    bottom: -7px;
+    right: 11px;
+    border-top: 7px solid var(--color-error);
+  }
+  
+  /* ====================================================== */
+  /* ==========  [7] Override location-wrapper + Select2  == */
+  /* ====================================================== */
+  
+  /* Ẩn <select> gốc, vì Select2 render khung riêng */
+  .location-wrapper select {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+  }
+  
+  /* Đảm bảo .select2-container giãn hết chiều rộng */
+  .location-wrapper .selection > span {
+    flex: 1;
+    min-width: 0;
+    border: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+  
+  /* Chỉnh màu chữ và spacing của text hiển thị */
+  .location-wrapper .selection > span > span {
+    color: var(--color-text) !important;
+    line-height: 1.2 !important;
+    white-space: nowrap;
+    padding: 0.4rem 0.5rem !important;
+  }
+  
+  /* Chỉnh màu mũi tên của Select2 */
+  .location-wrapper b {
+    border-color: var(--color-text) transparent transparent transparent !important;
+  }
+  
+  /* Ẩn nút xóa nếu không cần */
+  .location-wrapper .selection > span > span > span {
+    display: none !important;
+  }
+  
+  /* Chỉnh màu icon SVG */
+  .woocommerce-shipping-fields .icon,
+  .woocommerce-billing-fields .icon {
+    fill: var(--icon-bg);
+  }
+  
+  span.amount {
+    color: var(--color-price) !important;
+  }
+  .input-text, .input-text:focus {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+  }
+  
+  /* ====================================================== */
+  /* ==========  [8] Theme cho Select2 (Dùng biến)  ========= */
+  /* ====================================================== */
+
+  /* Single select */
+  .select2-container .select2-selection--single {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-surface);
+    width: 100%;
+  }
+  
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    color: var(--color-text);
+  }
+  
+  .select2-container .select2-selection--single .select2-selection__arrow b {
+    border-color: var(--color-text) transparent transparent transparent;
+  }
+  
+  /* Hover & focus cho single */
+  .select2-container.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent var(--color-accent) transparent;
+  }
+
+.select2-container--default .select2-results__option--highlighted[aria-selected], 
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: var(--color-accent) !important;
+    color: var(--color-text2) !important;
+}
+  
+  /* Multiple select */
+  .select2-container .select2-selection--multiple {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-surface);
+  }
+  
+  .select2-container .select2-selection--multiple .select2-selection__rendered {
+    /* padding: 0 5px; */
+    color: var(--color-text);
+  }
+  
+  .select2-container .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+  }
+  
+  /* Dropdown */
+  .select2-container .select2-dropdown {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-surface);
+  }
+  
+  /* Kết quả option */
+  .select2-container .select2-results__option {
+    color: var(--color-text);
+  }
+  
+  /* Option highlight */
+  .select2-container .select2-results__option--highlighted[aria-selected],
+  .select2-container .select2-results__option--highlighted[data-selected] {
+    background-color: var(--color-accent);
+    color: #fff;
+  }
+  
+  /* Placeholder */
+  .select2-container .select2-selection__placeholder {
+    color: #888;
+  }
+  
+  .select2-container .select2-search__field {
+    background-color: transparent !important;
+    color: var(--color-text) !important;
+  }
+  
+  .select2-container--default .select2-results__option[data-selected=true] {
+    background-color: var(--color-selected) !important;
+  }
+  
+  .location-wrapper {
+    position: relative;
+  }
+  
+  /* Icon được định vị tuyệt đối bên trái */
+  .location-wrapper > span:first-child {
+    position: absolute;
+    left: 0; /* khoảng cách từ lề trái của container */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* không ảnh hưởng đến click vào select */
+  }
+  
+  span.select2.select2-container.select2-container--default {
+    padding: 6px 6px 6px 36px !important;
+    margin: 0 !important;
+  }
+
+/* ====================================================== */
+/* ==========  [9] Tooltip  ========= */
+/* ====================================================== */
+div.has__tooltips {
+  position: relative;
+}
+div.has__tooltips label {
+  position: absolute;
+  color: var(--color-text-tooltip) !important;
+  background: var(--color-bg-tooltip) !important;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  visibility: hidden;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 6px #807279;
+}
+div.has__tooltips label:after {
+  content: '';
+  position: absolute;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid var(--color-bg-tooltip);
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+div.has__tooltips label.tooltip__jump:after {
+  top: 100%;
+  left: 50%;
+}
+
+div.has__tooltips label.location__tooltip-jump:after {
+  top: calc(50% - 8px);
+  left: -8px;
+
+  border-left: 8px solid transparent;
+  border-right: 8px solid var(--color-bg-tooltip);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+div.has__tooltips label.location__tooltip-jump,
+div.has__tooltips label.tooltip__jump {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 50px;
+  margin-left: -68px;
+  z-index: 5;
+}
+
+div.has__tooltips label.tooltip__jump {
+  right: 5%;
+}
+
+div.has__tooltips label.location__tooltip-jump{
+  left: 42%;
+  top: 12%;
+}
+
+@media screen and (max-width: 1050px) {
+  div.has__tooltips label.location__tooltip-jump{
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  div.has__tooltips label.location__tooltip-jump{
+    left: 60%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  div.has__tooltips label.location__tooltip-jump{
+    display: none;
+  }
+}
+
+.tooltip__jump{
+  animation: jump 1.5s infinite;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 30px;
+    opacity: 0.8;
+  }
+  50% {
+    bottom: 36px;
+    opacity: 0.7;
+  }
+  100% {
+    bottom: 30px;
+    opacity: 0.8;
+  }
+}
+
+/* ====================================================== */
+/* ==========  [10] COUPON  ========= */
+/* ====================================================== */
+
+.woocommerce-form-coupon-toggle label{
+  color: var(--color-text2);
+}
+
+.coupon__input-wrapper {
+  border-radius: 10px 0 0 10px;
+}
+
+button[name=apply_coupon]{
+  border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 550px) {
+  .coupon__input-wrapper {
+    border-radius: 5px;
+  }
+
+  button[name=apply_coupon]{
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+
+/* ====================================================== */
+/* ==========  [11] ORDER REVIEW CARD  ========= */
+/* ====================================================== */
+
+/* overide flatsome */
+.col-inner.has-border{
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.checkout-sidebar .shop_table td,
+.checkout-sidebar .shop_table th{
+  border-bottom: 1px solid var(--border-color);
+}
+
+.shop_table thead th {
+  border-width: 3px;
+}
+
+.payment_methods li+li {
+  border-top: 1px solid var(--border-color) !important;
+  padding-top: 7px;
+}
+
+.woocommerce-billing-fields {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+.woocommerce form {
+  margin-bottom: 0 !important;
+}
+
+button[name="woocommerce_checkout_place_order"]{
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .checkout-sidebar {
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: var(--color-surface);
+    /* background: linear-gradient(
+      108.16deg,
+      rgba(11, 23, 9, 0.75) 3.4%,
+      rgba(0, 5, 3, 0.2) 97.55%
+    ); */
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(6px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .checkout-sidebar,
+  .woocommerce {
+    padding: 8px;
+    border: none;
+    background: transparent;
+  }
+}
+
+/* ====================================================== */
+/* ==========  [12] ORDER RECEIVED  ========= */
+/* ====================================================== */
+
+.thank__you-card {
+  --col: #e4e4e7;
+  position: relative;
+  min-width: 360px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: var(--color-surface);
+  box-shadow: 0 0 32px transparent;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.thank__you-card.basic { --col: #0891b2; }
+.thank__you-card.standard { --col: #059669; }
+.thank__you-card.premium { --col: #c026d3; }
+
+.thank__you-card > *:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.thank__you-card:hover {
+  border-color: var(--color-boder-hover-card);
+  background-color: var(--color-surface);
+  box-shadow: 0 0 32px var(--color-box-shadow);
+  transform: translateY(-16px) scale(1.02);
+}
+
+.thank__you-card .woocommerce-order-overview li,
+.thank__you-card .heading p,
+.thank__you-card h2,
+.thank__you-card .heading h4 {
+  color: var(--color-text);
+}
+
+/* Heading */
+.thank__you-card .heading h4 {
+  padding-bottom: 12px;
+  font-size: 150%;
+  font-weight: normal;
+}
+
+.thank__you-card .heading p {
+  font-weight: lighter;
+}
+
+/* Order Overview */
+/* Đặt vị trí của phần tử cha */
+.ithan__flex-py-2-in-sum p {
+  position: relative;
+  display: inline-block;
+}
+
+/* Di chuyển phần tử small lên góc trái và cho nó hiển thị trước */
+.woocommerce-order-details small.shipped_via {
+  position: absolute; /* Đặt phần tử ở vị trí tuyệt đối */
+  z-index: 2; /* Đảm bảo small ở trên */
+  display: inline-block; /* Để nó hiện lên trên một dòng */
+  min-width: 150px;
+  transform: translateY(75%); /* Dịch chuyển phần tử lên 100% chiều cao của chính nó */
+  left: -90px; /* Đảm bảo nó xuất hiện ở góc trái */
+  font-size: 14px; /* Kích thước chữ tùy chỉnh */
+}
+
+
+
+/* Đảm bảo phần tử span có một chút padding bên trái */
+.woocommerce-order-details span.woocommerce-Price-amount {
+  padding-left: 20px; /* Điều chỉnh khoảng cách nếu cần */
+}
+
+.thank__you-card .woocommerce-order-overview__order.order strong,
+.thank__you-card .woocommerce-Price-amount.amount {
+  position: relative;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.thank__you-card .woocommerce-order-overview li {
+  padding-bottom: 16px;
+  font-weight: lighter;
+  text-align: left;
+  list-style: none;
+}
+
+.thank__you-card .woocommerce-order-overview li strong {
+  font-size: 16px;
+  padding-left: 24px;
+  text-align: left;
+}
+
+/* ====================================================== */
+/* ==========     13.    NAMECARD STYLE         ========= */
+/* ====================================================== */
+
+.ithandech__thank-you section.woocommerce-order-details,
+.ithandech__thank-you .woocommerce-customer-details,
+.ithandech__thank-you .addresses {
+  display: contents !important;
+}
+
+.namecard {
+  width: 100%;
+  padding: 20px;
+  
+  letter-spacing: 1px;
+  color: rgba(241, 247, 237, 0.95);
+  overflow: hidden !important;
+  
+  border-radius: 6px;
+  font-weight: 100;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.namecard:hover {
+  background-color: var(--color-surface);
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 25px rgba(134, 146, 150, 0.3);
+  border: 1px solid  var(--color-boder-hover-card);
+}
+
+.namecard:hover .circle1 {
+  bottom: -60px;
+}
+
+.namecard:hover .circle2 {
+  right: -20px;
+  top: -20px;
+}
+
+.namecard h2 {
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--color-text);
+}
+
+.namecard h2 span {
+  font-size: 12px;
+  font-weight: 100;
+  color: var(--color-text);
+}
+
+.namecard h5 {
+  font-weight: 300;
+  color: var(--color-text);
+}
+
+.namecard p {
+  line-height: 22px;
+  color: var(--color-text);
+}
+
+/* Circles */
+.namecard .circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.namecard .circle1 {
+  right: 100px;
+  bottom: -80px;
+  background-color: var(--color-address-circle);
+  transition: all 1s ease;
+}
+
+.namecard .circle2 {
+  width: 60px;
+  height: 60px;
+  right: -30px;
+  top: -30px;
+  border: 3px solid var(--color-address-circle);
+  transition: all 1s ease;
+}
+
+/* Icon kích thước */
+.namecard .icon {
+  width: 25px;
+  height: 25px;
+}
+
+/* Căn giữa icon và văn bản cho phone, email */
+.namecard p.phone,
+.namecard p.email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.namecard span.icon {
+  margin-right: 0.5rem;
+}
+
+.namecard svg.icon {
+  vertical-align: middle;
+}
+
+/* ====================================================== */
+/* ==========   14. ORDER DETAILS STYLE         ========= */
+/* ====================================================== */
+
+/* --- Flex cho phần Price & Shipping --- */
+.ithandech__thank-you .woocommerce-order-details > p {
+  display: flex;
+  align-items: center;
+}
+.ithandech__thank-you .woocommerce-order-details p .shipped_via {
+  order: -1;              /* Đưa small lên trước */
+  margin-right: 8px;       /* Khoảng cách tùy chỉnh nếu cần */
+}
+.ithandech__thank-you .woocommerce-order-details p .woocommerce-Price-amount {
+  order: 0;               /* Đảm bảo span giữ vị trí sau */
+}
+
+/* --- Typography --- */
+.ithan__text-lg {
+  font-size: 18px;         /* 1.125rem */
+  line-height: 28px;
+}
+.ithandech__order-detail-title {
+  font-size: 24px;         /* 1.5rem */
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ithan__text-sm {
+  font-size: 14px;         /* 0.875rem */
+  line-height: 20px;
+  color: var(--muted);
+}
+
+/* --- Card Styles (áp dụng cho payment__card và ithan__col-lg) --- */
+.payment__card,
+.ithan__col-lg {
+  background-color: transparent;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.ithan__card-p-4 {
+  background-color: transparent;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* --- Grid System --- */
+.ithan__grid-cols-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .ithan__grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .ithan__grid-cols-3 {
+    padding: 20px;
+  }
+}
+
+/* --- Flex Utilities cho các hàng --- */
+/* Chung cho cả .ithan__flex-py-2 và .ithan__flex-py-2-in-sum */
+.ithan__flex-py-2,
+.ithan__flex-py-2-in-sum {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+/* Riêng cho .ithan__flex-py-2: border-bottom mặc định */
+.ithan__flex-py-2 {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Border thay đổi khi là phần tử cuối cùng trong ngữ cảnh nhất định */
+.woocommerce-order-details .ithan__order-items-details .ithan__flex-py-2:last-child {
+  border-bottom: 3px solid var(--border-color);
+}
+.woocommerce-order-details .ithan__col-lg .ithan__flex-py-2-in-sum:last-child {
+  border-top: 3px solid var(--border-color);
+}
+
+/* variant products */
+.wc-item-meta {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.wc-item-meta li {
+  background: transparent;
+  border-radius: 3px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 10px 0 15px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+/* Thêm CSS mới để strong và p nằm trên cùng dòng */
+.wc-item-meta-label, 
+.wc-item-meta li p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  line-height: 26px;
+}
+
+.wc-item-meta li p {
+  margin-left: 5px;
+}
+
+/* ====================================================== */
+/* ==========   15. VIETQR CODE         ========= */
+/* ====================================================== */
+
+/* === Ticket Container === */
+.ticket-container {
+  background-color: var(--color-ticket-container);
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* === Ticket Header === */
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  font-weight: bold;
+}
+
+.ticket-logo {
+  font-size: 16px;
+}
+
+.ticket-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+/* === QR Code Section === */
+.ticket-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.ticket-qr img {
+  object-fit: cover;
+}
+
+.ticket-qr .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.ticket-qr a {
+	color: var(--color-text);
+	text-decoration: none;
+}
+
+.ticket-qr a:hover {
+	color: var(--color-text2);
+}
+
+.qr-code-download {
+  position: relative;
+  overflow: hidden;
+  padding: 0.85rem 2rem;
+  margin-top: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text);
+  text-decoration: none;
+
+  border-radius: 8px;
+  background-color: transparent;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 0 1px var(--color-text);
+
+  transform: translateZ(0);
+}
+
+.qr-code-download__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  z-index: 2; /* Đảm bảo label nằm trên cùng */
+  font-size: 1.2rem;
+  letter-spacing: 0.025em;
+
+  transition: color 0.32s ease-in-out;
+}
+
+
+/* === Ticket Information === */
+.woocommerce-vietqr-bank-details{
+  display: contents;
+}
+.ticket-info {
+  text-align: center;  /* Căn giữa toàn bộ văn bản bên trong .ticket-info */
+  padding: 0 16px;
+  margin-bottom: 20px;
+}
+
+.ticket-info h2, .ticket-info h4 {
+  margin: 0 auto;      /* Đảm bảo các phần tử h2 và h4 có margin tự động, giúp căn giữa */
+  display: block;      /* Đảm bảo các phần tử này là block-level elements */
+}
+
+.ticket-show-name,
+.ticket-date {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.ticket-info b {
+  color: var(--color-price);
+  font-weight: bold;
+}
+
+/* === Divider with Circles === */
+.ticket-divider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ticket-divider-left-circle,
+.ticket-divider-right-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  /* border: 2px solid var(--color-divider); */
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  z-index: 2;
+}
+
+.ticket-divider-left-circle {
+  left: -10px;
+}
+
+.ticket-divider-right-circle {
+  right: -10px;
+}
+
+.ticket-divider {
+  width: 100%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--color-divider),
+    var(--color-divider) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  z-index: 1;
+}
+
+.wc-vietqr-bank-details-wrapper.ticket-container .woocommerce-Price-amount.amount{
+  font-size: 150%;
+}
+
+/* === Ticket Info Layout === */
+
+.bank-details-container {
+  display: flex;              /* Sử dụng flex để căn chỉnh các mục */
+  flex-direction: column;     /* Chia các mục thành cột */
+  align-items: center;        /* Căn giữa các phần tử theo chiều ngang */
+  gap: 10px;                  /* Khoảng cách giữa các mục */
+}
+
+.bank-detail-item {
+  display: flex;              /* Dùng flex để căn chỉnh label và value */
+  justify-content: center;    /* Căn giữa cả label và value */
+  align-items: center;        /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.bank-detail-label {
+  margin-right: 5px;          /* Khoảng cách giữa label và dấu : */
+}
+
+.bank-detail-value {
+  font-weight: bold;
+}
+
+/* payment buy tranfer bank */
+
+.payment__card {
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+
+  margin-bottom: 30px;
+}
+
+.wc-bacs-bank-details.order_details.bacs_details{
+  list-style: none;
+  padding: 16px;
+}
+
+/* ====================================================== */
+/* ==========   16. ORDER PAY         ========= */
+/* ====================================================== */
+
+/* overide flatsome theme */
+.ithan__payment-recieved li{
+  margin-left: 0 !important;
+  margin-bottom: 0;
+}
+
+/* CART ITEMS */
+.ithan__payment-recieved .cart .items {
+  display: block;
+  width: 100%;
+  padding: .8em 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.ithan__payment-recieved .cart .items.even {
+  background: var(--color-surface);
+}
+.ithan__payment-recieved .cart .items .infoWrap {
+  display: table;
+  width: 100%;
+}
+
+.ithan__payment-recieved .cart .items .cartSection {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.ithan__payment-recieved .cart .items .cartSection .itemNumber {
+  font-size: .75em;
+  color: var(--color-text);
+  margin-bottom: .5em;
+}
+
+.ithan__payment-recieved .cart .items .cartSection h3 {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+}
+
+.ithan__payment-recieved .cart .items .cartSection p {
+  display: inline-block;
+  font-size: .85em;
+  color: var(--color-text);
+}
+
+.ithan__payment-recieved .cart .items .cartSection p .qty {
+  font-weight: bold;
+}
+
+.ithan__payment-recieved .cart .items .cartSection .variant__info {
+  color: #82CA9C;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  display: inline-block;
+}
+
+.ithan__payment-recieved .cart .items .cartSection .variant__info.out {
+  color: #F69679;
+}
+/* overite flatsome theme */
+.wc-item-meta {
+  margin-top: 0 !important;
+}
+
+.ithan__payment-recieved .cart .items .cartSection .itemImg {
+  width: 4em;
+  float: left;
+}
+
+.ithan__payment-recieved .cart .items .cartSection.qtyWrap, 
+.ithan__payment-recieved .cart .items .cartSection.prodTotal {
+  text-align: right;
+}
+
+.ithan__payment-recieved .cart .items .cartSection.qtyWrap p, 
+.ithan__payment-recieved .cart .items .cartSection.prodTotal p {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.ithan__payment-recieved .product-quantity.qty:hover {
+  background: #FF5A00;
+  -webkit-transition: all 200ms ease-in-out;
+	-moz-transition: all 200ms ease-in-out;
+	-o-transition: all 200ms ease-in-out;
+	-ms-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out; 
+}
+
+.ithan__payment-recieved .cart .items .cartSection .itemImg {
+  width: 8em;
+  display: inline;
+  padding-right: 1em;
+}
+
+.ithan__payment-recieved .shipped_via {
+  float: left; /* Đẩy chữ sang trái */
+  margin-right: 5px; /* Tạo khoảng cách với giá */
+}
+
+.ithan__payment-recieved .woocommerce-Price-amount {
+  display: inline-block; /* Ngăn giá bị đẩy xuống dòng */
+}
+
+.ithan__payment-recieved ul li {
+  list-style: none;
+}
+/* overite flatsome theme */
+.ithan__payment-recieved label.payment-label {
+  color: var(--color-text);
+}
+
+@media only screen and (max-width: 39.375em) {
+  .wrap {
+    width: 98%;
+    padding: 2% 0;
+  }
+  .projTitle {
+    font-size: 1.5em;
+    padding: 10% 5%;
+  }
+  .heading {
+    padding: 1em;
+    font-size: 90%;
+  }
+  .cart .items .cartSection {
+    width: 100%;
+    display: block;
+    float: left;
+  }
+  .cart .items .cartSection.qtyWrap {
+    width: 10%;
+    text-align: center;
+    padding: .5em 0;
+    float: right;
+  }
+  .cart .items .cartSection.qtyWrap:before {
+    content: "QTY";
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    padding: .25em;
+    font-size: .75em;
+  }
+  .cart .items .cartSection .itemImg {
+    width: 25%;
+  }
+  .promoCode, 
+  .subtotal {
+    width: 100%;
+  }
+  a.btn.continue {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+

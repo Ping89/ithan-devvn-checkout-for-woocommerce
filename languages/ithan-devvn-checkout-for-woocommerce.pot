@@ -1,0 +1,689 @@
+# Copyright (C) 2025 iThanDev Team
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ithan devvn checkout for woocommerce 3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/ithan-devvn-checkout-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-06-19T04:03:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: ithan-devvn-checkout-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: ithan-devvn-checkout-for-woocommerce.php
+msgid "ithan devvn checkout for woocommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: ithan-devvn-checkout-for-woocommerce.php
+msgid "https://github.com/Ping89/ithandech-devvn-checkout-customizer"
+msgstr ""
+
+#. Description of the plugin
+#: ithan-devvn-checkout-for-woocommerce.php
+msgid "Custom Checkout Form for Vietnam addresses (of DEVVN-ithan plugin)."
+msgstr ""
+
+#. Author of the plugin
+#: ithan-devvn-checkout-for-woocommerce.php
+msgid "iThanDev Team"
+msgstr ""
+
+#. Author URI of the plugin
+#: ithan-devvn-checkout-for-woocommerce.php
+msgid "https://github.com/Ping89"
+msgstr ""
+
+#: includes/ithadech_vietnam_shipping.php:72
+#: ithan-devvn-checkout-for-woocommerce.php:1365
+msgid "Chọn quận/huyện"
+msgstr ""
+
+#: includes/ithadech_vietnam_shipping.php:97
+#: ithan-devvn-checkout-for-woocommerce.php:1392
+msgid "Chọn xã/phường"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:41
+#: includes/ithandech_vietqr_options.php:69
+msgid "Bank"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:45
+#: includes/ithandech_vietqr_options.php:73
+msgid "Bank Id"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:49
+#: includes/ithandech_vietqr_options.php:77
+msgid "Account number"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:53
+#: includes/ithandech_vietqr_options.php:81
+msgid "Account name"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:57
+#: includes/ithandech_vietqr_options.php:85
+msgid "Amount"
+msgstr ""
+
+#: includes/ithandech_vietqr_options.php:61
+#: includes/ithandech_vietqr_options.php:89
+msgid "Memo"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:285
+msgid "Mã màu nền không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:295
+msgid "Mã màu bề mặt không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:305
+msgid "Mã màu chữ chính không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:315
+msgid "Mã màu chữ phụ không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:325
+msgid "Mã màu chữ cỡ nhỏ không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:335
+msgid "Mã màu thông tin sản phẩm không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:355
+msgid "Mã màu nhấn mạnh (khi hover trên selectbox) không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:365
+msgid "Mã màu đã chọn (trên selectbox) không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:375
+msgid "Mã màu thông báo lỗi không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:385
+msgid "Mã màu hiển thị giá cả không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:395
+msgid "Mã màu nền nhãn hiển thị không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:405
+msgid "Mã màu viền các nút lựa chọn (tròn) không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:415
+msgid "Mã màu viền các nút lựa chọn (tròn) khi chọn không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:425
+msgid "Mã màu dòng kẻ ngang/ đường viền không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:435
+msgid "Mã màu nút đặt hàng không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:445
+msgid "Mã màu nút đặt hàng khi hover không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:455
+msgid "Mã màu dòng kẻ ngang mã QR thanh toán không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:465
+msgid "Mã màu nền mã QR thanh toán không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:475
+msgid "Mã màu nền khuyết tròn địa chỉ thanh toán không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:485
+msgid "Mã nền đường viền khi hover thanh toán không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:495
+msgid "Mã màu bóng đổ thẻ trong thanh toán không hợp lệ. Ví dụ hợp lệ: #ff6633"
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:530
+msgid "Đã lưu cài đặt."
+msgstr ""
+
+#: includes/ithandech_wc_admin_helper.php:537
+msgid "Không có giá trị hợp lệ để lưu."
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:21
+#: includes/ithandech_wc_admin_options.php:22
+msgid "VN Address Customizer"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:94
+msgid "Cài đặt giao diện cho trang thanh toán WC"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:113
+#: includes/ithandech_wc_admin_options.php:135
+msgid "Mặc định"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:114
+#: includes/ithandech_wc_admin_options.php:134
+msgid "Tùy chỉnh"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:116
+msgid "Xưng hô"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:123
+msgid "Áp dụng xưng hô"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:136
+msgid "Hồng"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:137
+msgid "Xanh dương"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:138
+msgid "Vàng"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:139
+msgid "Trắng"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:140
+msgid "Nâu"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:141
+msgid "Kem"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:142
+msgid "Đen"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:144
+msgid "Gói giao diện sẵn có/ tùy chỉnh"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:159
+msgid "Màu nền"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:167
+msgid "Màu bề mặt"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:175
+msgid "Màu chữ chính"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:183
+msgid "Màu chữ phụ"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:191
+msgid "Màu chữ cỡ nhỏ"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:199
+msgid "Màu thông tin sản phẩm"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:207
+msgid "Màu nhấn mạnh (hover khi chọn selectbox)"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:215
+msgid "Màu đã chọn (trên selectbox)"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:223
+msgid "Màu thông báo lỗi (màu chỉ thị, màu nền))"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:231
+msgid "Màu hiển thị giá cả"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:239
+msgid "Màu nền hiển thị nhãn"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:247
+msgid "Màu chữ hiển thị nhãn"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:255
+msgid "Màu đường viền các nút chọn lựa (tròn)"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:263
+msgid "Màu đường viền các nút chọn lựa (tròn) khi chọn"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:271
+msgid "Màu dòng kẻ ngang/ đường viền"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:279
+msgid "Màu nút đặt hàng"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:287
+msgid "Màu nút đặt hàng khi hover"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:295
+msgid "Màu dòng kẻ ngang mã QR thanh toán"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:303
+msgid "Màu nền mã QR thanh toán"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:311
+msgid "Màu nền khuyết tròn địa chỉ thanh toán"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:319
+msgid "Màu nền đường viền khi hover thanh toán"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:327
+msgid "Màu bóng đổ thẻ trong thanh toán"
+msgstr ""
+
+#: includes/ithandech_wc_admin_options.php:394
+msgid "VN Address Customizer"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:28
+msgid "Nam-Nữ"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:29
+msgid "Ông-Bà"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:30
+msgid "Bác Trai-Bác Gái (Bá)"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:31
+msgid "Chú-Thím"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:32
+msgid "Dượng-Cô"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:33
+msgid "Cậu-Mợ"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:34
+msgid "Dượng-Dì"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:35
+msgid "Anh-Chị"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:36
+msgid "Em Trai-Em Gái"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:37
+msgid "Cháu Trai-Cháu Gái"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:38
+msgid "Sư Thầy-Sư Cô"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:39
+msgid "Cha Đạo-Ni Cô"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:40
+msgid "Tía-Má"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:41
+msgid "Bố-Mẹ"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:42
+msgid "Cha-Mẹ"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:91
+msgid "Bạn cần cài đặt và kích hoạt plugin \"WooCommerce\" trước khi sử dụng plugin ithan-devvn-checkout-for-woocommerce-plugin."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:97
+msgid "Bạn cần cài đặt và kích hoạt plugin \"Woo Checkout Field Editor Pro\" trước khi sử dụng plugin ithan-devvn-checkout-for-woocommerce-plugin."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:185
+#: ithan-devvn-checkout-for-woocommerce.php:196
+msgid "Xưng Hô"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:188
+#: ithan-devvn-checkout-for-woocommerce.php:199
+msgid "Nam"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:189
+#: ithan-devvn-checkout-for-woocommerce.php:200
+msgid "Nữ"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:259
+msgid "Ông"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:264
+msgid "Bà"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:386
+#: ithan-devvn-checkout-for-woocommerce.php:413
+msgid "Tỉnh/Thành"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:387
+#: ithan-devvn-checkout-for-woocommerce.php:414
+msgid "Tỉnh/Thành Phố"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:438
+#: ithan-devvn-checkout-for-woocommerce.php:439
+#: ithan-devvn-checkout-for-woocommerce.php:463
+#: ithan-devvn-checkout-for-woocommerce.php:464
+msgid "Quận/Huyện/t.x"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:488
+#: ithan-devvn-checkout-for-woocommerce.php:489
+#: ithan-devvn-checkout-for-woocommerce.php:513
+#: ithan-devvn-checkout-for-woocommerce.php:514
+msgid "Xã/Phường"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:930
+#: ithan-devvn-checkout-for-woocommerce.php:951
+msgid "Yêu cầu không hợp lệ. Vui lòng thử lại."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:935
+msgid "Cung cấp địa chỉ tỉnh/thành phố."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:938
+msgid "Cung cấp địa chỉ quận/huyện/thị xã..."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1172
+msgid "Không xác định"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1298
+msgid "Họ tên là bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1315
+msgid "Địa chỉ là bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1322
+msgid "SĐT bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1329
+msgid "Địa chỉ email không hợp lệ."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1336
+msgid "Chọn tỉnh/thành"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1340
+#: ithan-devvn-checkout-for-woocommerce.php:1353
+msgid "Tỉnh/Thành là bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1373
+#: ithan-devvn-checkout-for-woocommerce.php:1383
+msgid "Quận/Huyện là bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1400
+#: ithan-devvn-checkout-for-woocommerce.php:1410
+msgid "Xã/Phường là bắt buộc."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1689
+msgid "Ngày giao hàng:"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1690
+msgid "Anytime."
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1697
+msgid "Ngày giao hàng"
+msgstr ""
+
+#: ithan-devvn-checkout-for-woocommerce.php:1702
+msgid "Ngày mà khách hàng mong muốn nhận được hàng."
+msgstr ""
+
+#. Translators: $s shipping destination.
+#: templates/cart/cart-shipping.php:81
+#, php-format
+msgid "Shipping to %s."
+msgstr ""
+
+#: templates/cart/cart-shipping.php:82
+msgid "Change address"
+msgstr ""
+
+#: templates/cart/cart-shipping.php:84
+msgid "Shipping options will be updated during checkout."
+msgstr ""
+
+#: templates/cart/cart-shipping.php:92
+msgid "Shipping costs are calculated during checkout."
+msgstr ""
+
+#: templates/cart/cart-shipping.php:94
+msgid "Enter your address to view shipping options."
+msgstr ""
+
+#: templates/cart/cart-shipping.php:97
+msgid "There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help."
+msgstr ""
+
+#. Translators: $s shipping destination.
+#: templates/cart/cart-shipping.php:111
+#, php-format
+msgid "No shipping options were found for %s."
+msgstr ""
+
+#: templates/cart/cart-shipping.php:115
+msgid "Enter a different address"
+msgstr ""
+
+#: templates/checkout/form-coupon.php:19
+msgid "Nhấn vào nhập mã giảm giá"
+msgstr ""
+
+#: templates/checkout/form-coupon.php:28
+msgid "Coupon:"
+msgstr ""
+
+#: templates/checkout/form-coupon.php:34
+msgid "Coupon code"
+msgstr ""
+
+#: templates/checkout/form-coupon.php:40
+msgid "Apply coupon"
+msgstr ""
+
+#: templates/checkout/form-pay.php:21
+msgid "Tổng"
+msgstr ""
+
+#: templates/checkout/form-pay.php:59
+msgid "ID:"
+msgstr ""
+
+#: templates/checkout/form-pay.php:127
+msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
+msgstr ""
+
+#: templates/checkout/form-shipping.php:14
+msgid "Ship to a different address?"
+msgstr ""
+
+#: templates/checkout/form-shipping.php:44
+msgid "Additional information"
+msgstr ""
+
+#: templates/checkout/order-received.php:22
+#: templates/checkout/thankyou.php:43
+#: templates/checkout/thankyou.php:102
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: templates/checkout/review-order.php:12
+msgid "Product"
+msgstr ""
+
+#: templates/checkout/review-order.php:13
+#: templates/checkout/review-order.php:45
+msgid "Subtotal"
+msgstr ""
+
+#: templates/checkout/review-order.php:92
+msgid "Total"
+msgstr ""
+
+#: templates/checkout/thankyou.php:19
+msgid "Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+
+#: templates/checkout/thankyou.php:22
+msgid "Pay"
+msgstr ""
+
+#: templates/checkout/thankyou.php:24
+msgid "My account"
+msgstr ""
+
+#: templates/checkout/thankyou.php:41
+msgid "ĐƠN HÀNG!"
+msgstr ""
+
+#: templates/checkout/thankyou.php:50
+msgid "Order number:"
+msgstr ""
+
+#: templates/checkout/thankyou.php:55
+msgid "Date:"
+msgstr ""
+
+#: templates/checkout/thankyou.php:61
+msgid "Email:"
+msgstr ""
+
+#: templates/checkout/thankyou.php:67
+msgid "Total:"
+msgstr ""
+
+#: templates/checkout/thankyou.php:73
+msgid "Payment method:"
+msgstr ""
+
+#: templates/order/order-details-customer.php:20
+msgid "Billing address"
+msgstr ""
+
+#: templates/order/order-details-customer.php:65
+msgid "Shipping address"
+msgstr ""
+
+#: templates/order/order-details-item.php:29
+msgid "Số lượng: "
+msgstr ""
+
+#: templates/order/order-details.php:53
+msgid "Order details"
+msgstr ""
+
+#: templates/order/order-details.php:91
+msgid "Note:"
+msgstr ""
+
+#: templates/order/order-details.php:100
+msgid "Actions"
+msgstr ""
+
+#. translators: %1$s Action name, %2$s Order number.
+#: templates/order/order-details.php:110
+#, php-format
+msgid "%1$s order number %2$s"
+msgstr ""
+
+#: templates/order/vietqr-custom-bank-details.php:30
+msgid "Mã QR"
+msgstr ""
+
+#: templates/order/vietqr-custom-bank-details.php:40
+msgid "VietQR QR Image"
+msgstr ""
+
+#: templates/order/vietqr-custom-bank-details.php:46
+msgid "Tải QR Code"
+msgstr ""
+
+#: templates/order/vietqr-custom-bank-details.php:57
+msgid "LƯU ẢNH QR"
+msgstr ""
+
+#: templates/order/vietqr-custom-bank-details.php:68
+msgid "Our bank details"
+msgstr ""
+
+#. translators: %s is the payment content including order prefix and ID (e.g., "PAY12345")
+#: templates/order/vietqr-custom-bank-details.php:73
+#, php-format
+msgid "Please transfer the correct content <b>%s</b> for we can confirm the payment"
+msgstr ""

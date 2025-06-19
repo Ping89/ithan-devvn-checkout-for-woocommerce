@@ -1,0 +1,144 @@
+.ithan__display-none{
+    display: none !important;
+}
+
+p.form-field {
+    position: relative;
+}
+
+p.form-field:has(select.ithandech_required) label::after,
+p.form-field:has(input.ithandech_required) label::after {
+    content: " (*)";
+    color: red;
+}
+
+p.form-field input.ithandech_required + span.description::before,
+p.form-field select.ithandech_required + span.description::before {
+    content: attr(aria-label);
+    background-color: var(--tooltip-color);
+    padding: 0.5em;
+    border-radius: 0.3em;
+    width: max-content;
+    max-width: 100%;
+    text-align: center;
+    transform: scale(0);
+    position: absolute;
+    bottom: 100%; /* Đảm bảo tooltip được đặt phía trên input */
+    left: 50%;
+    transform-origin: bottom center;
+    z-index: 2;
+}
+
+p.form-field input.ithandech_required + span.description::after,
+p.form-field select.ithandech_required + span.description::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Đảm bảo mũi tên nằm phía dưới tooltip */
+    left: 50%;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-top: 0.5rem solid var(--tooltip-color); /* Màu vàng của mũi tên */
+    transform: translateX(-50%); /* Căn chỉnh mũi tên vào giữa tooltip */
+    z-index: 1;
+}
+
+p.form-field input.ithandech_required + span.description,
+p.form-field select.ithandech_required + span.description {
+    position: absolute;
+    top: -.15rem;
+    right: .2rem;
+    background-color: rgba(255, 86, 86, 0.8);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    padding: 0.4rem 0.75rem;
+    text-align: center;
+    z-index: 1;
+    transition: transform 100ms;
+    transition-timing-function: linear;
+    --tooltip-color: rgba(255, 86, 86, 0.8);
+    --arrow-size: 0.5rem;
+    --scale: 0;
+    --translate-x: -50%;
+    --translate-y: calc(-1 * var(--arrow-size));
+}
+
+.panel-wrap.woocommerce{
+    position: relative;
+}
+
+.ava-alert {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:#fff;
+    background-color: transparent;
+    z-index: 1000;
+
+    translate: -50% 50%;
+}
+
+.ava-alert .alert{
+    display: flex;
+    align-items:center;
+    padding: 0.55rem 0.65rem 0.55rem 0.75rem;
+    border-radius:1rem;
+    min-width:400px;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    box-shadow:
+        0px 3.2px 13.8px rgba(0, 0, 0, 0.02),
+        0px 7.6px 33.3px rgba(0, 0, 0, 0.028),
+        0px 14.4px 62.6px rgba(0, 0, 0, 0.035),
+        0px 25.7px 111.7px rgba(0, 0, 0, 0.042),
+        0px 48px 208.9px rgba(0, 0, 0, 0.05),
+        0px 115px 500px rgba(0, 0, 0, 0.07)
+}
+
+.ava-alert .content{
+    display: flex;
+    align-items:center;
+}
+
+.ava-alert .close{
+    background-color: transparent;
+    border:none;
+    outline:none;
+    transition:all 0.2s ease-in-out;
+    padding: 0.75rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.ava-alert .close:hover{
+    background-color: #fff;
+}
+
+.ava-alert .danger{
+    background-color: rgba(65, 30, 23, 0.9);
+    border:2px solid #EC4D2B;
+}
+.ava-alert .danger .icon{
+    background-color: #EC4D2B;
+}
+
+.ava-alert .icon{
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius:39% 61% 42% 58% / 50% 51% 49% 50%;
+    box-shadow:
+    0px 3.2px 13.8px rgba(0, 0, 0, 0.02),
+    0px 7.6px 33.3px rgba(0, 0, 0, 0.028),
+    0px 14.4px 62.6px rgba(0, 0, 0, 0.035),
+    0px 25.7px 111.7px rgba(0, 0, 0, 0.042),
+    0px 48px 208.9px rgba(0, 0, 0, 0.05),
+    0px 115px 500px rgba(0, 0, 0, 0.07)
+}
+.ava-alert p {
+    color: #fff !important;
+}

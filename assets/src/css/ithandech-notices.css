@@ -1,0 +1,168 @@
+:root {
+    --white: #fff;
+    --green: #4caf50;
+    --blue: #2896f3;
+    --yellow: #fbc107;
+    --red: #f55153;
+    --transition-duration: 0.35s;
+    --toast-duration: 3000ms; /* Thêm biến này cho duration */
+}
+
+.toast__panel-wrapper *,
+.toast__panel-wrapper ::after,
+.toast__panel-wrapper ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* TOASTS CSS */
+.toast__panel-container {
+    position: fixed;
+    top: 28%;
+    right: 0;
+    padding: 2.4rem;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column; /* Xếp các thông báo theo cột */
+
+    color: var(--white);
+    font-size: 62.5%;
+}
+
+.toast__panel-container .notification.danger {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--red);
+    border-radius: .8rem;
+    padding: 1.2rem;
+    margin-bottom: .7rem;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: toast-opening var(--transition-duration) ease-in-out forwards;
+    overflow-x: hidden;
+    overflow-y: hidden;  /* Ngừng cuộn dọc */
+}
+
+.toast__panel-container .notification.danger:not(.active) {
+    animation-name: toast-closing;
+    animation-duration: 0.35s;
+}
+
+/* Đảm bảo hỗ trợ với những trình duyệt mới có hỗ trợ :has() */
+/* .toast__panel-container:has(.notification.danger.active) {
+    transform: translateX(0); 
+} */
+
+/* Trường hợp mặc định khi không có class active */
+/* .toast__panel-container:not(:has(.notification.danger.active)) {
+    transform: translateX(100%);
+} */
+
+.t-icon {
+    margin-right: .6rem;
+}
+
+.t-icon svg {
+    fill: var(--white);
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.t-message {
+    margin-right: 1.4rem;
+    color: var(--white);
+    font-size: clamp(.8rem, 1vw, 1rem);
+}
+
+.t-close {
+    cursor: pointer;
+}
+
+.t-close svg {
+    fill: var(--white);
+    opacity: 1;
+    width: 1.8rem;
+    height: 1.8rem;
+    transition: opacity var(--transition-duration);
+}
+
+.t-close:hover svg {
+    opacity: 1;
+}
+
+.toast__panel-container .t-progress-bar {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 6px;
+    width: 100%;
+    border-radius: 0 0 0 0.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: progress-bar-animation linear forwards var(--toast-duration);
+    transform-origin: left;
+}
+
+@media screen and (max-width: 450px) {
+    .toast__panel-container {
+        padding: .6rem;
+        font-size: 50.5%;
+    }
+
+    .t-icon {
+        margin-right: .3rem;
+    }
+
+    .t-icon svg {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    .t-close svg {
+        width: .9rem;
+        height: .9rem;
+    }
+
+    .t-message {
+        margin-right: .6rem;
+    }
+}
+
+@keyframes toast-opening {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes toast-closing {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    75% {
+        max-height: 15rem;
+        padding: 2.4rem;
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        max-height: 0;
+        padding: 0;
+        transform: translateX(100%);
+    }
+}
+
+@keyframes progress-bar-animation {
+    to {
+        transform: scaleX(0);
+    }
+}
